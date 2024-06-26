@@ -1,5 +1,14 @@
+import { SocketProvider } from "./context/SocketProvider";
+import ChatCanvas from "./components/ChatCanvas";
+
 function App() {
-  return <div>App</div>;
+  return (
+    <SocketProvider>
+      <div className="container">
+        <ChatCanvas />
+      </div>
+    </SocketProvider>
+  );
 }
 
 export default App;
